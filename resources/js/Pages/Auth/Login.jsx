@@ -68,22 +68,25 @@ export default function Login({ status, canResetPassword }) {
                     <InputError message={errors.password} className="mt-2" />
                 </div>
 
-
                 <div className="flex items-center justify-center mt-4">
                     <PrimaryButton processing={processing}>
-                        Log In
+                        Login
                     </PrimaryButton>
                 </div>
 
                 <div className="flex items-center justify-end mt-4">
-                    {canResetPassword && (
-                        <Link
-                            href={route('password.request')}
-                            className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        >
-                            Forgot your password?
-                        </Link>
-                    )}
+                    <Link
+                        href={route('password.request')}
+                        className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+                    >
+                        Forgot your password?
+                    </Link>
+                    <Link
+                        href={route('register')}
+                        className="ml-4 underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+                    >
+                        Need an account?
+                    </Link>
                 </div>
             </form>
         </GuestLayout>

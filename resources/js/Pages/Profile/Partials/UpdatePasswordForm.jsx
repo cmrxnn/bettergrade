@@ -6,7 +6,7 @@ import TextInput from '@/Components/TextInput';
 import { useForm } from '@inertiajs/react';
 import { Transition } from '@headlessui/react';
 
-export default function UpdatePasswordForm({ className }) {
+export default function UpdatePasswordForm() {
     const passwordInput = useRef();
     const currentPasswordInput = useRef();
 
@@ -37,7 +37,7 @@ export default function UpdatePasswordForm({ className }) {
     };
 
     return (
-        <section className={className}>
+        <section className={'p-4 bg-white rounded-lg shadow-lg'}>
             <header>
                 <h2 className="text-lg font-medium text-gray-900">Update Password</h2>
 
