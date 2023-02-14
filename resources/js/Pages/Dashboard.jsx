@@ -1,7 +1,9 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 
 export default function Dashboard(props) {
+    const name = props.auth.user.name;
+
     return (
         <AuthenticatedLayout
             auth={props.auth}
@@ -13,7 +15,7 @@ export default function Dashboard(props) {
             <div className="py-12">
                 <div className="sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div className="p-6 text-gray-900">You're logged in!</div>
+                        <h2 className="text-4xl text-center p-6 text-gray-900">Welcome back, {name.charAt(0).toUpperCase() + name.slice(1)}!</h2>
                     </div>
                 </div>
             </div>

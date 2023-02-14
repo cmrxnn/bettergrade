@@ -20,12 +20,16 @@ Route::get('/', [Controllers\BaseController::class, 'index'])->name('api:index')
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('api:dashboard');
+
+Route::prefix('/quizzes')->group(function () {
+    Route::get('/', [Controllers\QuizzesController::class, 'index'])->name('api:quizzes.index');
+});
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [Controllers\ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [Controllers\ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ControllersProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile', [Controllers\ProfileController::class, 'edit'])->name('api:profile.edit');
+    Route::patch('/profile', [Controllers\ProfileController::class, 'update'])->name('api:profile.update');
+    Route::delete('/profile', [ControllersProfileController::class, 'destroy'])->name('api:profile.destroy');
 });
 
 require __DIR__.'/auth.php';
