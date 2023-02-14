@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Bettergrade\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

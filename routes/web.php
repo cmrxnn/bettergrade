@@ -1,7 +1,7 @@
 <?php
 
 use Inertia\Inertia;
-use App\Http\Controllers;
+use Bettergrade\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 

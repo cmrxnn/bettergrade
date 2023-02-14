@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Bettergrade\Http\Controllers;
 
 use Inertia\Inertia;
 use Inertia\Response;
